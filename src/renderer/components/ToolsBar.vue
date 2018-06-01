@@ -107,7 +107,7 @@
 <script>
 import ObrIcon from './commons/ObrIcon'
 export default {
-  components: {ObrIcon}
+  components: { ObrIcon }
 }
 </script>
 
