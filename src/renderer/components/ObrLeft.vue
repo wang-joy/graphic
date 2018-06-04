@@ -1,10 +1,11 @@
 <template>
   <div class="obr-left">
+    <button @click="addTab"></button>
     <Collapse v-model="value">
         <Panel name="1">
           基本图形
           <ButtonGroup size="small" slot="content">
-            <Button @click="arrangeSignal('horizontalFlip')" title="水平翻转" class="ivew-btn">
+            <Button @click="addShape('rect')" title="水平翻转" class="ivew-btn">
               <ObrIcon type="shuipingfanzhuan"></ObrIcon>
             </Button>
             <Button @click="arrangeSignal('verticalFlip')" title="垂直翻转" class="ivew-btn">
@@ -42,7 +43,14 @@ export default {
       value: '1'
     }
   },
-  components: { ObrIcon }
+  components: { ObrIcon },
+  methods: {
+    addTab () {
+    },
+    addShape (type) {
+      this.$svg.draw(type)
+    }
+  }
 }
 </script>
 <style scoped>

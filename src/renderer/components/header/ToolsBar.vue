@@ -1,7 +1,7 @@
 <template>
   <div class="tools-bar">
     <ButtonGroup size="small">
-				<Button @click="fileSignal('new')" title="新建文件 Ctrl+N">
+				<Button @click="test()" title="新建文件 Ctrl+N">
 					<ObrIcon type="xinjian"></ObrIcon>
 				</Button>
 				<Button @click="fileSignal('open')" title="打开文件 Ctrl+O">
@@ -105,15 +105,19 @@
 </template>
 
 <script>
-import ObrIcon from './commons/ObrIcon'
+import ObrIcon from '../commons/ObrIcon'
 export default {
-  components: { ObrIcon }
+  components: { ObrIcon },
+  methods: {
+    test () {
+      this.$svg.drawCancel()
+    }
+  }
 }
 </script>
 
 <style scoped>
 .tools-bar {
-  height: 70px;
   width: 100%;
   background-color: #eee;
 }
