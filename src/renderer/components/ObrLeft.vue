@@ -1,33 +1,41 @@
 <template>
   <div class="obr-left">
-    <button @click="addTab"></button>
     <Collapse v-model="value">
         <Panel name="1">
           基本图形
           <ButtonGroup size="small" slot="content">
-            <Button @click="addShape('rect')" title="水平翻转" class="ivew-btn">
-              <ObrIcon type="shuipingfanzhuan"></ObrIcon>
+            <Button @click="addShape('rect')" title="正方形" class="ivew-btn">
+              <ObrIcon type="zhengfangxing"></ObrIcon>
             </Button>
-            <Button @click="arrangeSignal('verticalFlip')" title="垂直翻转" class="ivew-btn">
-              <ObrIcon type="chuizhifanzhuan"></ObrIcon>
+            <Button @click="addShape('line')" title="直线" class="ivew-btn">
+              <ObrIcon type="zhixian"></ObrIcon>
             </Button>
-            <Button @click="arrangeSignal('rightRotate')" title="顺时针旋转90度" class="ivew-btn">
-              <ObrIcon type="shunshizhen"></ObrIcon>
+            <Button @click="addShape('triangle')" title="三角形" class="ivew-btn">
+              <ObrIcon type="sanjiaoxing"></ObrIcon>
             </Button>
-            <Button @click="arrangeSignal('leftRotate')" title="逆时针旋转90度" class="ivew-btn">
-              <ObrIcon type="nishizhen"></ObrIcon>
+            <Button @click="addShape('circle')" title="圆形" class="ivew-btn">
+              <ObrIcon type="yuanxing"></ObrIcon>
             </Button>
-            <Button @click="arrangeSignal('horizontalFlip')" title="水平翻转" class="ivew-btn">
-              <ObrIcon type="shuipingfanzhuan"></ObrIcon>
+            <Button @click="addShape('ellipse')" title="椭圆" class="ivew-btn">
+              <ObrIcon type="tuoyuan"></ObrIcon>
             </Button>
-            <Button @click="arrangeSignal('verticalFlip')" title="垂直翻转" class="ivew-btn">
-              <ObrIcon type="chuizhifanzhuan"></ObrIcon>
+            <Button @click="addShape('text')" title="文字" class="ivew-btn">
+              <ObrIcon type="wenben"></ObrIcon>
             </Button>
-            <Button @click="arrangeSignal('rightRotate')" title="顺时针旋转90度" class="ivew-btn">
-              <ObrIcon type="shunshizhen"></ObrIcon>
+            <Button @click="addShape('polygon')" title="多边形" class="ivew-btn">
+              <ObrIcon type="duobianxing"></ObrIcon>
             </Button>
-            <Button @click="arrangeSignal('leftRotate')" title="逆时针旋转90度" class="ivew-btn">
-              <ObrIcon type="nishizhen"></ObrIcon>
+            <Button @click="addShape('polyline')" title="折线" class="ivew-btn">
+              <ObrIcon type="zhexian"></ObrIcon>
+            </Button>
+            <Button @click="addShape('curve')" title="曲线" class="ivew-btn">
+              <ObrIcon type="quxian"></ObrIcon>
+            </Button>
+            <Button @click="addShape('sector')" title="扇形" class="ivew-btn">
+              <ObrIcon type="shanxing"></ObrIcon>
+            </Button>
+            <Button @click="addShape('image')" title="图片" class="ivew-btn">
+              <ObrIcon type="图片"></ObrIcon>
             </Button>
           </ButtonGroup>
         </Panel>
@@ -56,7 +64,7 @@ export default {
 <style scoped>
   .ivew-btn{
     background-color: #fff;
-    margin-right:10px;
+    margin-right:5px;
     margin-bottom:5px;
     border: none
   }

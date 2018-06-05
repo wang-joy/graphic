@@ -29,5 +29,7 @@ export default {
 </script>
 
 <style>
-
+.el-tabs__header{
+  margin: 0;
+}
 </style>

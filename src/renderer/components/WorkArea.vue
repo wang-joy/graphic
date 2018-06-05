@@ -1,6 +1,6 @@
 <template>
-  <div :id="id">
-
+  <div>
+    <div :id="id" :style="workAreaStyle" class="work-area"></div>
   </div>
 </template>
 
@@ -9,11 +9,20 @@ export default {
   props: ['id'],
   mounted () {
     var id = this.id
-    this.$svg.createSvg(id, 1200, 1200)
+    this.$svg.createSvg(id, 12000, 12000)
+  },
+  computed: {
+    workAreaStyle () {
+      return {
+        height: `${this.$store.state.ObrWin.height - 131}px`
+      }
+    }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+  .work-area{
+    overflow: auto;
+  }
 </style>
